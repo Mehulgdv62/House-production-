@@ -21,7 +21,7 @@ df = df.dropna()
 df['Area'] = df['Area'].str.replace(' Sq. ft', '').astype(float)
 df['Price'] = df['Price'].str.replace(' Cr', '').astype(float)
 
-# Convert categorical columns to numeric
+# Convert categorical columns to numericc
 df = pd.get_dummies(df, columns=['Furnishing', 'Transaction', 'Type'], drop_first=True)
 plt.figure(figsize=(10,6))
 sns.histplot(df['Price'], bins=30)
